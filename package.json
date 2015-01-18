@@ -4,7 +4,7 @@
   "description": "Simplifies the restify route creation",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/*_test.js"
+    "test": "./node_modules/.bin/mocha test/*_test.js"
   },
   "repository": {
     "type": "git",
