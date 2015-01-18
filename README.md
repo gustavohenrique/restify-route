@@ -1,7 +1,7 @@
 restify-route
 =============
 
-A lazy way to create restify routes.
+A lazy way to create restify routes. [![Build Status](https://secure.travis-ci.org/gustavohenrique/restify-route.svg?branch=master)](http://travis-ci.org/gustavohenrique/restify-route)
 
 ```javascript
 var restify = require('restify'),
