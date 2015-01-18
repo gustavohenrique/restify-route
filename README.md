@@ -17,7 +17,11 @@ routes
     .set('/contact/create', 'post', function (req, res) {
         // validation code here
         res.send(400, { error: 'The request does not contains a valid contact.' });
-    })
+    });
+
+server.listen(3000, '127.0.0.1', function () {
+    console.log('Running on http://127.0.0.1:3000');
+});
 ```
 
 See the restify documentation for more information.
