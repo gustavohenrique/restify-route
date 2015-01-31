@@ -9,7 +9,7 @@ A lazy way to create restify routes.
 
 ```javascript
 var restify = require('restify'),
-    route = require('restify-route');
+    routes = require('restify-route');
 
 var server = restify.createServer();
 
@@ -20,7 +20,13 @@ routes
     })
     .set('/contact/create', 'post', function (req, res) {
         // validation code here
-        res.send(400, { error: 'The request does not contains a valid contact.' });
+        res.send(201, 'created');
+    })
+    .set('/contact/delete/:id', 'del', function (req, res) {
+        res.send('deleted');
+    })
+    .set('/contact/update', 'put', function (req, res) {
+        res.send('updated');
     });
 
 server.listen(3000, '127.0.0.1', function () {

@@ -3,7 +3,7 @@
     function Route () {
 
         var self = this,
-            HTTP_METHODS = ['delete', 'get', 'head', 'options', 'patch', 'post', 'put'];
+            HTTP_METHODS = ['del', 'get', 'head', 'options', 'patch', 'post', 'put'];
 
         this.use = function (server) {
             self.server = server;
@@ -31,6 +31,7 @@
 
             return self;
         };
+
     };
 
     module.exports = new Route();

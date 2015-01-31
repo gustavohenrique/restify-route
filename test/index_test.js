@@ -30,6 +30,16 @@ describe('restify-route', function() {
             client.get('/test').expect(200, done);
         });
 
+        it('Should return a response from a DELETE request', function (done) {
+            route.use(server).set('/test', 'del', function (req, res) {
+                res.end();
+            });
+
+            client = request(server);
+            client.delete('/test').expect(200, done);
+        });
+
+
         it('The route can be setted using a uppercase http method', function (done) {
             route.use(server).set('/test', 'POST', function (req, res) {
                 res.end();
