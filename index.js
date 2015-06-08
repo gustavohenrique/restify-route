@@ -16,7 +16,7 @@
             }
 
             httpMethod = httpMethod || 'get';
-            
+
             if (HTTP_METHODS.indexOf(httpMethod.toLowerCase()) === -1) {
                 httpMethod = 'get';
             }
@@ -26,7 +26,7 @@
                     res.end();
                 }
             }
-            
+
             self.server[httpMethod.toLowerCase()](path, callback);
 
             return self;
