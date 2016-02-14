@@ -1,14 +1,14 @@
 {
   "name": "restify-route",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Simplifies the restify route creation",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha test/index_test.js"
+    "test": "./node_modules/.bin/mocha test/index.spec.js"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/gustavohenrique/restify-route.git"
+    "url": "https://github.com/gustavohenrique/restify-route.git"
   },
   "keywords": [
     "restify",
@@ -22,9 +22,12 @@
   },
   "homepage": "https://github.com/gustavohenrique/restify-route",
   "devDependencies": {
-    "chai": "^1.10.0",
-    "mocha": "^2.1.0",
-    "restify": "^2.8.5",
-    "supertest": "^0.15.0"
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "restify": "^4.0.4",
+    "supertest": "^1.2.0"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^5.5.4"
   }
 }
