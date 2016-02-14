@@ -77,13 +77,13 @@ describe('restify-route', function() {
                     callback: authByToken,
                     allwaysVerifyAuthentication: true
                 })
-                .set('/auth', 'get', function (req, res) {
+                .set('/projects/:id', 'get', function (req, res) {
                     res.send(200, req.user);
                 });
 
             client = request(server);
             client
-                .get('/auth')
+                .get('/projects/1')
                 .set('authorization', 'Bearer ' + TOKEN)
                 .end(function (err, res) {
                     expect(res.status).to.equal(200);

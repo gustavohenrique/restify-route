@@ -1,2 +1,2 @@
-v0.0.4 (2016-02-14)
+v0.0.5 (2016-02-14)
 * Supports json web token

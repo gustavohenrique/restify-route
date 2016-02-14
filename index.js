@@ -30,7 +30,11 @@ var restify = require('restify');
             self.server.use(authMiddleware);
 
             function isPathNeedsAuthentication (req) {
-                var key = req.route.path + '_' + req.route.method.toLowerCase();
+                var httpVerb = req.route.method.toLowerCase();
+                if (httpVerb === 'delete') {
+                    httpVerb = 'del'
+                }
+                var key = req.route.path + '_' + httpVerb;
                 return self.routes[key].needsAuthentication;
             }
 
