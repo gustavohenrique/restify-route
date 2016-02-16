@@ -7,7 +7,7 @@ var restify = require('restify');
 
         var self = this;
         var HTTP_METHODS = ['del', 'get', 'head', 'options', 'patch', 'post', 'put'];
-        
+
         self.server = {};
         self.routes = {};
         self.jwtConfig = {
@@ -39,7 +39,6 @@ var restify = require('restify');
             }
 
             function authMiddleware (req, res, next) {
-                
                 if (isPathNeedsAuthentication(req)) {
                     if (req.headers && req.headers.authorization) {
                         var config = self.jwtConfig;
